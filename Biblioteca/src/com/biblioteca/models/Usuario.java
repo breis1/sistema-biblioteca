@@ -8,6 +8,11 @@ public class Usuario {
     public Usuario() {
     }
 
+    public Usuario(String nome, String email) {
+        this.nome = nome;
+        this.email = email;
+    }
+
     public Usuario(int id, String nome, String email) {
         this.id = id;
         this.nome = nome;
@@ -36,5 +41,14 @@ public class Usuario {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

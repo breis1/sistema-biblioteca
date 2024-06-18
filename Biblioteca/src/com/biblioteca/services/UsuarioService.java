@@ -22,14 +22,15 @@ public class UsuarioService {
         }
     }
 
-    public Usuario buscarUsuarioPorEmail(String email) throws SQLException {
-        String sql = "SELECT * FROM usuarios WHERE email = ?";
+    public Usuario buscarUsuarioPorNome(String nome) throws SQLException {
+        Usuario usuario = null;
+        String sql = "SELECT * FROM usuarios WHERE nome = ?";
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, email);
+            stmt.setString(1, nome);
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
-                    return new Usuario(
+                    usuario = new Usuario(
                         rs.getInt("id"),
                         rs.getString("nome"),
                         rs.getString("email")
@@ -37,7 +38,7 @@ public class UsuarioService {
                 }
             }
         }
-        return null;
+        return usuario;
     }
 
     public List<Usuario> listarUsuarios() throws SQLException {
@@ -67,5 +68,13 @@ public class UsuarioService {
         }
     }
 
-    // Outros métodos conforme necessário
+    public Usuario buscarOuCadastrarUsuario(String nome, String email) throws SQLException {
+        Usuario usuario = buscarUsuarioPorNome(nome);
+        if (usuario == null) {
+            // Usuário não encontrado, vamos cadastrar
+            usuario = new Usuario(nome, email);
+            adicionarUsuario(usuario);
+        }
+        return usuario;
+    }
 }

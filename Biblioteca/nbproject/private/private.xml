@@ -3,7 +3,6 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Reis/Documents/Biblioteca/db/database.sql</file>
             <file>file:/C:/Users/Reis/Documents/Biblioteca/src/com/biblioteca/main/Main.java</file>
             <file>file:/C:/Users/Reis/Documents/Biblioteca/src/com/biblioteca/utils/DatabaseConnection.java</file>
             <file>file:/C:/Users/Reis/Documents/Biblioteca/src/com/biblioteca/models/Livro.java</file>
@@ -11,8 +10,8 @@
             <file>file:/C:/Users/Reis/Documents/Biblioteca/src/com/biblioteca/models/Emprestimo.java</file>
             <file>file:/C:/Users/Reis/Documents/Biblioteca/src/com/biblioteca/services/LivroService.java</file>
             <file>file:/C:/Users/Reis/Documents/Biblioteca/src/com/biblioteca/services/EmprestimoService.java</file>
-            <file>file:/C:/Users/Reis/Documents/Biblioteca/test/com/biblioteca/utils/DatabaseConnectionTest.java</file>
             <file>file:/C:/Users/Reis/Documents/Biblioteca/src/com/biblioteca/services/UsuarioService.java</file>
+            <file>file:/C:/Users/Reis/Documents/Biblioteca/test/com/biblioteca/utils/DatabaseConnectionTest.java</file>
         </group>
     </open-files>
 </project-private>

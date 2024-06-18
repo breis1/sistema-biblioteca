@@ -5,18 +5,16 @@ public class Livro {
     private String titulo;
     private String autor;
     private String isbn;
-    private int quantidade; // incluímos a quantidade de livros disponíveis
+    private int quantidade;
 
-    public Livro() {}
-
-    public Livro(String titulo, String autor, String isbn, int quantidade) {
+    public Livro(int id, String titulo, String autor, String isbn, int quantidade) {
+        this.id = id;
         this.titulo = titulo;
         this.autor = autor;
         this.isbn = isbn;
         this.quantidade = quantidade;
     }
 
-    // getters e setters
     public int getId() {
         return id;
     }
@@ -55,5 +53,15 @@ public class Livro {
 
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
+    }
+
+    @Override
+    public String toString() {
+        return "" +
+                "" + titulo + '\'' +
+                "" + autor + '\'' +
+                "" + isbn + '\'' +
+                ", quantidade=" + quantidade +
+                '}';
     }
 }

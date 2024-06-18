@@ -59,4 +59,15 @@ public class Emprestimo {
     public void setDataDevolucao(Date dataDevolucao) {
         this.dataDevolucao = dataDevolucao;
     }
+
+    @Override
+    public String toString() {
+        return "Emprestimo{" +
+                "id=" + id +
+                ", livroId=" + livroId +
+                ", usuarioId=" + usuarioId +
+                ", dataEmprestimo=" + dataEmprestimo +
+                ", dataDevolucao=" + dataDevolucao +
+                '}';
+    }
 }
